@@ -9,8 +9,6 @@
 import UIKit
 import MapKit
 
-
-
 class ViewController: UIViewController {
 
     @IBOutlet weak var latLabel: UILabel!
@@ -31,7 +29,13 @@ class ViewController: UIViewController {
 
     @IBAction func didTouchMap(_ sender: UILongPressGestureRecognizer) {
         
-        print("Touch map")
+        let position = sender.location(in: mapView)
+        
+        let coord = mapView.convert(position, toCoordinateFrom: mapView)
+        
+        
+        
+        
     }
     
     
