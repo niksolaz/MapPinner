@@ -33,7 +33,9 @@ class ViewController: UIViewController {
         
         let coord = mapView.convert(position, toCoordinateFrom: mapView)
         
+        latLabel.text = "lat \(coord.latitude)"
         
+        lonLabel.text = "lon \(coord.longitude)"
         
         
     }
