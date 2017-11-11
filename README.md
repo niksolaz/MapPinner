@@ -1,2 +1,1 @@
-# MapPinner
-geocoder in swift
+Simple app to localize coordinate and sign pinner  
