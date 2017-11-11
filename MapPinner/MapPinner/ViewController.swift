@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,7 +34,7 @@ class ViewController: UIViewController {
         let position = sender.location(in: mapView)
         
         let coord = mapView.convert(position, toCoordinateFrom: mapView)
-        
+       
         latLabel.text = "lat \(coord.latitude)"
         
         lonLabel.text = "lon \(coord.longitude)"
@@ -43,4 +45,14 @@ class ViewController: UIViewController {
     
     
 }
+
+
+
+
+
+extension ViewController: UISearchBarDelegate {
+    
+}
+
+
 

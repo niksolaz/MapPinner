@@ -18,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnk-V2-R5B">
-                                <rect key="frame" x="16" y="74" width="343" height="21"/>
+                                <rect key="frame" x="16" y="118" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6b-03-oXP">
-                                <rect key="frame" x="16" y="110" width="343" height="21"/>
+                                <rect key="frame" x="16" y="154" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,20 +36,30 @@
                                     <outletCollection property="gestureRecognizers" destination="lBo-G0-fbK" appends="YES" id="mci-CP-Kq6"/>
                                 </connections>
                             </mapView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bGX-ZN-snE">
+                                <rect key="frame" x="0.0" y="42" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="y6b-03-oXP" firstAttribute="top" secondItem="Wnk-V2-R5B" secondAttribute="bottom" constant="8" id="9u4-SX-nfA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wnk-V2-R5B" secondAttribute="trailing" constant="16" id="B3Y-3N-NtR"/>
-                            <constraint firstItem="aU1-Xa-v3g" firstAttribute="top" secondItem="y6b-03-oXP" secondAttribute="bottom" constant="64" id="BFS-cC-1yt"/>
-                            <constraint firstItem="y6b-03-oXP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="D5W-Vi-aDk"/>
-                            <constraint firstItem="aU1-Xa-v3g" firstAttribute="leading" secondItem="y6b-03-oXP" secondAttribute="leading" id="GAo-Ym-bGW"/>
-                            <constraint firstItem="y6b-03-oXP" firstAttribute="top" secondItem="Wnk-V2-R5B" secondAttribute="bottom" constant="15" id="LIZ-oJ-naF"/>
-                            <constraint firstItem="Wnk-V2-R5B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Mwc-5D-9L5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y6b-03-oXP" secondAttribute="trailing" constant="16" id="QiB-xx-46u"/>
-                            <constraint firstItem="Wnk-V2-R5B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="ZRs-p4-gUe"/>
-                            <constraint firstItem="aU1-Xa-v3g" firstAttribute="trailing" secondItem="y6b-03-oXP" secondAttribute="trailing" id="cUT-mx-m9x"/>
-                            <constraint firstAttribute="bottom" secondItem="aU1-Xa-v3g" secondAttribute="bottom" constant="20" symbolic="YES" id="fgt-1N-JeH"/>
+                            <constraint firstItem="y6b-03-oXP" firstAttribute="top" secondItem="Wnk-V2-R5B" secondAttribute="bottom" constant="15" id="2G7-Kg-h4L"/>
+                            <constraint firstAttribute="bottom" secondItem="aU1-Xa-v3g" secondAttribute="bottom" constant="20" symbolic="YES" id="99D-OS-2vm"/>
+                            <constraint firstItem="y6b-03-oXP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FkM-5K-NOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y6b-03-oXP" secondAttribute="trailing" constant="16" id="L9v-hL-bOt"/>
+                            <constraint firstItem="bGX-ZN-snE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OPK-bV-zQe"/>
+                            <constraint firstItem="Wnk-V2-R5B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SJL-BS-6Yr"/>
+                            <constraint firstItem="y6b-03-oXP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eUk-1P-7rJ"/>
+                            <constraint firstItem="bGX-ZN-snE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ehu-G7-lcv"/>
+                            <constraint firstItem="aU1-Xa-v3g" firstAttribute="trailing" secondItem="y6b-03-oXP" secondAttribute="trailing" id="hVQ-Y6-BjQ"/>
+                            <constraint firstItem="bGX-ZN-snE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="hwW-Id-vdy"/>
+                            <constraint firstItem="Wnk-V2-R5B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jN5-h1-bHI"/>
+                            <constraint firstItem="aU1-Xa-v3g" firstAttribute="leading" secondItem="y6b-03-oXP" secondAttribute="leading" id="lfQ-O8-eWz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wnk-V2-R5B" secondAttribute="trailing" constant="16" id="mwr-eH-9XX"/>
+                            <constraint firstItem="bGX-ZN-snE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="olr-gB-XT0"/>
+                            <constraint firstItem="Wnk-V2-R5B" firstAttribute="top" secondItem="bGX-ZN-snE" secondAttribute="bottom" constant="20" id="orV-Lf-1mz"/>
+                            <constraint firstItem="aU1-Xa-v3g" firstAttribute="top" secondItem="y6b-03-oXP" secondAttribute="bottom" constant="20" id="pWj-jd-AZ8"/>
+                            <constraint firstItem="y6b-03-oXP" firstAttribute="top" secondItem="Wnk-V2-R5B" secondAttribute="bottom" constant="15" id="t9s-GM-mih"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -57,6 +67,7 @@
                         <outlet property="latLabel" destination="Wnk-V2-R5B" id="NFB-JH-NbX"/>
                         <outlet property="lonLabel" destination="y6b-03-oXP" id="eZZ-Wz-bq8"/>
                         <outlet property="mapView" destination="aU1-Xa-v3g" id="x9j-qP-bhW"/>
+                        <outlet property="searchBar" destination="bGX-ZN-snE" id="bzR-Tc-cd8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
