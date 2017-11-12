@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
@@ -55,11 +56,36 @@ class ViewController: UIViewController {
 extension ViewController: UISearchBarDelegate {
   
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text!)
+        
         searchBar.resignFirstResponder()
+        
+        guard let testo = searchBar.text else {
+            return
+        }
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(testo) {
+            (locations, error) in
+            if error != nil {
+                print("error :  \(error!)")
+                return
+            }
+            guard let locs = locations else {
+                return
+            }
+            guard let loc = locs.first else {
+                return
+            }
+            
+            guard let coords = loc.location else {
+                return
+            }
+            self.lonLabel.text = "Lon: \(coords.coordinate.longitude)"
+            self.latLabel.text = "Lat: \(coords.coordinate.latitude)"
+        }
+        
     }
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        
+        print(searchBar.text!)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
