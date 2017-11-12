@@ -79,11 +79,25 @@ extension ViewController: UISearchBarDelegate {
             guard let coords = loc.location else {
                 return
             }
-            self.lonLabel.text = "Lon: \(coords.coordinate.longitude)"
-            self.latLabel.text = "Lat: \(coords.coordinate.latitude)"
+            
+            let lon = coords.coordinate.longitude
+            let lat = coords.coordinate.latitude
+            
+            self.lonLabel.text = "Lon: \(lon)"
+            self.latLabel.text = "Lat: \(lat)"
+            self.showLoc(lat: lat, lon: lon)
         }
         
     }
+    
+    func showLoc(lat:CLLocationDegrees, lon:CLLocationDegrees) {
+        let location = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        let span = MKCoordinateSpan(latitudeDelta: 0.0005, longitudeDelta: 0.0005)
+        let region = MKCoordinateRegionMake(location, span)
+        
+        mapView.setRegion(region, animated: true)
+    }
+    
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         print(searchBar.text!)
     }
